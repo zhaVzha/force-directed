@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <title>force directed</title>
+    <script src='js/vivagraph.js'></script>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/stats.min.js"></script>
+    <script src='js/index.js'></script>
+    <style type='text/css'>
+
+        body,
+        #graph-container {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            overflow: hidden;
+            margin: 0px;
+        }
+        .graph-overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        .graph-selection-indicator {
+            position: absolute;
+            background: transparent;
+            border: 1px solid orange;
+        }.button { cursor: pointer; }
+    </style>
+</head>
+
+<body onload = "main()">
+<div style="color: white; z-index:2; margin: 10px; position: absolute;">
+    <span class='button pause' style="color: black">暂停</span>
+    <span class='button continue' style="color: black">继续</span>
+</div>
+<div id="graph-container"></div>
+<div class="graph-overlay"></div>
+
+
+</body>
+</html>
